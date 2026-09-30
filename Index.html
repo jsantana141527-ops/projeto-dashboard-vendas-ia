@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Vendas IA - Julio Santana</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body{background:#0f0f0f;color:#fff;font-family:Arial;padding:15px}
+h1{color:#7b2fff}
+.card{background:#1e1e1e;padding:20px;border-radius:16px;margin:15px 0;border:1px solid #333}
+.kpi{font-size:32px;color:#7b2fff;font-weight:bold}
+</style>
+</head>
+<body>
+<h1>📊 Dashboard Inteligente de Vendas</h1>
+<p>Bootcamp Santander DIO - Julio Santana - Itauna MG</p>
+<div class="card"><div>Total Vendido (6 meses)</div><div class="kpi">R$ 287.500</div><p>+23% vs semestre anterior</p></div>
+<div class="card"><canvas id="vendas"></canvas></div>
+<div class="card"><h3>🤖 Insights do Agente IA</h3>
+<p>✅ Melhor mes: Junho - R$ 62k</p>
+<p>✅ Produto Top: Frete Logistica</p>
+<p>✅ Recomendacao: Aumentar frota em Jun/Jul</p>
+<p>✅ Previsao IA prox mes: R$ 68.500</p>
+</div>
+<script>
+new Chart(document.getElementById('vendas'),{type:'bar',data:{labels:['Jan','Fev','Mar','Abr','Mai','Jun'],datasets:[{label:'Vendas R$',data:[35000,42000,38000,55000,62000,55000],backgroundColor:'#7b2fff'}]},options:{responsive:true,plugins:{legend:{labels:{color:'#fff'}}},scales:{y:{ticks:{color:'#fff'}},x:{ticks:{color:'#fff'}}}}});
+</script>
+</body>
+</html>
