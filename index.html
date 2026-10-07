@@ -3,28 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard Vendas IA - Julio Santana</title>
+<title>Dashboard Inteligente de Vendas | Julio Santana</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
-body{background:#0f0f0f;color:#fff;font-family:Arial;padding:15px}
-h1{color:#7b2fff}
-.card{background:#1e1e1e;padding:20px;border-radius:16px;margin:15px 0;border:1px solid #333}
-.kpi{font-size:32px;color:#7b2fff;font-weight:bold}
+  *{box-sizing:border-box}
+  body{font-family:Inter, Arial, sans-serif; background:#0f172a; color:#fff; margin:0; padding:32px; min-height:100vh;}
+  .container{max-width:1450px; margin:0 auto;}
+  .header{margin-bottom:32px;}
+  .header h1{font-size:36px; margin:0 0 6px 0; letter-spacing:-0.5px;}
+  .header span{color:#22d3ee}
+  .subtitle{color:#94a3b8; font-size:16px; margin:0;}
+  
+  .grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:24px; margin-bottom:28px;}
+  .card{background:#1e293b; padding:28px; border-radius:20px; border:1px solid #334155; transition:0.2s;}
+  .card:hover{border-color:#22d3ee; transform:translateY(-2px);}
+  .card p{margin:0 0 12px 0; color:#94a3b8; font-size:13px; text-transform:uppercase; letter-spacing:0.5px;}
+  .kpi{font-size:38px; color:#22d3ee; font-weight:800; line-height:1;}
+  .kpi small{font-size:16px; color:#e2e8f0; font-weight:400}
+
+  .main{display:grid; grid-template-columns: 1.7fr 1fr; gap:24px; align-items:start;}
+  .box{background:#1e293b; padding:28px; border-radius:20px; border:1px solid #334155;}
+  .box h3{color:#38bdf8; margin:0 0 18px 0; font-size:18px;}
+  .insight{background:#0f172a; border:1px solid #334155; padding:16px; border-radius:12px; margin-bottom:12px; font-size:14px; line-height:1.5;}
+  .insight b{color:#22d3ee}
+  .tag{display:inline-block; background:#22d3ee20; color:#22d3ee; padding:4px 10px; border-radius:20px; font-size:11px; margin-bottom:8px; font-weight:700}
+
+  /* RESPONSIVO PRA TELA GRANDE NÃO FICAR APERTADO */
+  @media(max-width:1200px){ .grid{grid-template-columns:repeat(2, 1fr);} .main{grid-template-columns:1fr;} }
+  @media(max-width:640px){ body{padding:16px} .grid{grid-template-columns:1fr;} .header h1{font-size:26px} .kpi{font-size:30px} }
 </style>
 </head>
 <body>
-<h1>📊 Dashboard Inteligente de Vendas</h1>
-<p>Bootcamp Santander DIO - Julio Santana - Itauna MG</p>
-<div class="card"><div>Total Vendido (6 meses)</div><div class="kpi">R$ 287.500</div><p>+23% vs semestre anterior</p></div>
-<div class="card"><canvas id="vendas"></canvas></div>
-<div class="card"><h3>🤖 Insights do Agente IA</h3>
-<p>✅ Melhor mes: Junho - R$ 62k</p>
-<p>✅ Produto Top: Frete Logistica</p>
-<p>✅ Recomendacao: Aumentar frota em Jun/Jul</p>
-<p>✅ Previsao IA prox mes: R$ 68.500</p>
+<div class="container">
+
+  <div class="header">
+    <h1>Dashboard Inteligente de <span>Vendas + Logística</span></h1>
+    <p class="subtitle">Julio Santana | 10 anos de estrada -> Dados | SAP SAC | Power BI | Python</p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><p>Custo por KM Médio</p><div class="kpi">R$ 2,84</div></div>
+    <div class="card"><p>OTIF - No Prazo</p><div class="kpi">92,5%</div></div>
+    <div class="card"><p>Fretes Analisados</p><div class="kpi">1.247</div></div>
+    <div class="card"><p>Economia Identificada</p><div class="kpi"><small>R$</small> 14.800</div></div>
+  </div>
+
+  <div class="main">
+    <div class="box">
+      <h3>📈 Evolução de Custo por Rota</h3>
+      <canvas id="vendas"></canvas>
+    </div>
+    <div class="box">
+      <h3>🤖 Insights do Agente IA</h3>
+      <div class="insight"><span class="tag">ALERTA DE FROTA</span><br><b>Rota SP-RJ está 18% mais cara</b> que a média. Sugestão: renegociar com transportadora 2 ou migrar 30% para transportadora 3.</div>
+      <div class="insight"><span class="tag">PREVISÃO</span><br>Projeção para próximo mês: <b>Custo de R$ 3,10/km</b> se mantiver mix atual. Com otimização sugerida: <b>R$ 2,71/km</b>.</div>
+      <div class="insight"><span class="tag">OPORTUNIDADE</span><br>Detectado <b>12 fretes com cubagem ociosa >40%</b>. Consolidar cargas pode gerar economia adicional de R$ 4.200.</div>
+    </div>
+  </div>
+
 </div>
+
 <script>
-new Chart(document.getElementById('vendas'),{type:'bar',data:{labels:['Jan','Fev','Mar','Abr','Mai','Jun'],datasets:[{label:'Vendas R$',data:[35000,42000,38000,55000,62000,55000],backgroundColor:'#7b2fff'}]},options:{responsive:true,plugins:{legend:{labels:{color:'#fff'}}},scales:{y:{ticks:{color:'#fff'}},x:{ticks:{color:'#fff'}}}}});
+const ctx = document.getElementById('vendas');
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Jan','Fev','Mar','Abr','Mai','Jun'],
+    datasets: [{
+      label: 'Custo por KM (R$)',
+      data: [2.45, 2.62, 2.71, 2.84, 2.91, 2.84],
+      borderColor: '#22d3ee',
+      backgroundColor: 'rgba(34,211,238,0.1)',
+      tension: 0.4,
+      fill: true,
+      borderWidth: 3
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins:{ legend:{display:false}},
+    scales:{ 
+      y:{ grid:{color:'#334155'}, ticks:{color:'#94a3b8'} },
+      x:{ grid:{display:false}, ticks:{color:'#94a3b8'} }
+    }
+  }
+});
 </script>
 </body>
 </html>
