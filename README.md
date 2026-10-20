@@ -2,110 +2,46 @@
 
 Dashboard de vendas com análise de desempenho, indicadores-chave e insights automáticos utilizando IA, desenvolvido para apresentar resultados de negócio de forma visual e intuitiva.
 
-> Projeto do Bootcamp Santander DIO 2025 • Análise de dados com Chart.js • Inteligência Artificial aplicada a dashboards
+[![Site Live](https://img.shields.io/badge/Site-Live-brightgreen?style=for-the-badge)](https://lighthearted-melba-55ce08.netlify.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/j%C3%BAlio-santana-037278244)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5537998039408)
 
 ## 🌐 Acesso rápido
 
 - Site pessoal: https://lighthearted-melba-55ce08.netlify.app
 - Repositório: https://github.com/jsantana141527-ops/projeto-dashboard-vendas-ia
-- LinkedIn: https://www.linkedin.com/in/seu-perfil
-- WhatsApp: https://wa.me/5511999999999?text=Ol%C3%A1%20Julio%2C%20vim%20pelo%20reposit%C3%B3rio%20do%20Dashboard%20de%20Vendas
+- LinkedIn: https://www.linkedin.com/in/j%C3%BAlio-santana-037278244
+- WhatsApp: https://wa.me/5537998039408
 
 ## 📌 Sobre o projeto
 
-Este projeto foi desenvolvido com foco em:
+Projeto do Bootcamp Santander DIO 2025 • Análise de dados com Chart.js • IA aplicada a dashboards
 
-- visualização de métricas de vendas;
-- identificação de tendências e oportunidades;
-- suporte à tomada de decisão por meio de dados;
-- apresentação profissional de resultados em formato de dashboard;
-- integração de IA para geração de insights automáticos.
+- Visualização de métricas de vendas
+- Identificação de tendências e oportunidades
+- Suporte à tomada de decisão por meio de dados
+- Insights gerados com IA
+- Apresentação profissional de resultados em formato de dashboard
 
-A proposta combina análise de dados, storytelling visual e experiência de usuário para transformar números em informações estratégicas.
+## 🛠️ Tecnologias
 
-## ✨ Funcionalidades
-
-- Dashboard interativo com gráficos e indicadores principais;
-- Visualização de desempenho por período e categoria;
-- Análise de tendências de vendas;
-- Insights gerados com suporte de IA;
-- Interface responsiva e moderna;
-- Apresentação visual de métricas relevantes para negócios.
-
-## 🛠️ Tecnologias utilizadas
-
-- HTML
-- CSS
-- JavaScript
-- Chart.js
-- IA / automação de insights
-- GitHub Pages / hospedagem estática
-
-## 🧭 Estrutura do projeto
-
-```text
-projeto-dashboard-vendas-ia/
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-├── data/
-├── README.md
-└── ...
-```
-
-## ▶️ Como executar localmente
-
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/jsantana141527-ops/projeto-dashboard-vendas-ia.git
-```
-
-2. Acesse a pasta do projeto:
-
-```bash
-cd projeto-dashboard-vendas-ia
-```
-
-3. Inicie um servidor local:
-
-```bash
-python -m http.server 8000
-```
-
-4. Acesse no navegador:
-
-```text
-http://localhost:8000
-```
-
-## 📈 Objetivo do dashboard
-
-O objetivo deste dashboard é transformar dados de vendas em uma visão clara e estratégica, permitindo:
-
-- acompanhar o desempenho comercial;
-- comparar períodos e métricas;
-- antecipar tendências;
-- identificar oportunidades de crescimento;
-- apoiar decisões com base em dados reais.
+HTML • CSS • JavaScript • Chart.js • IA / automação • GitHub Pages
 
 ## 👨‍💻 Autor
 
-Julio Santana
+**Julio Santana** - Analista de Dados Logísticos
 
-- Desenvolvedor e analista de dados em formação
-- Especializado em dashboards, dados e IA aplicada a negócios
-- Localização: Itaúna, Minas Gerais
+10 anos de experiência em transporte e logística | Itaúna, Minas Gerais
+
+Especializado em dashboards, dados e IA aplicada a negócios.
 
 ## 📞 Contato
 
-- LinkedIn: https://www.linkedin.com/in/seu-perfil
-- WhatsApp: https://wa.me/5511999999999?text=Ol%C3%A1%20Julio%2C%20vim%20pelo%20reposit%C3%B3rio%20do%20Dashboard%20de%20Vendas
+- LinkedIn: https://www.linkedin.com/in/j%C3%BAlio-santana-037278244
+- WhatsApp: https://wa.me/5537998039408?text=Ol%C3%A1%20Julio%2C%20vim%20pelo%20seu%20Dashboard%20de%20Vendas
+- E-mail: jsantana1415@gmail.com
 - Site: https://lighthearted-melba-55ce08.netlify.app
 
-## 🏁 Conclusão
+## ✅ Resumo
 
-Este projeto representa uma solução prática e visualmente impactante para análise de vendas, combinando dados, inteligência artificial e boas práticas de dashboard para apoiar decisões de negócio com mais clareza e eficiência.
-
-Se você quiser colaborar, sugerir melhorias ou trocar ideias sobre dados, IA e dashboards, fique à vontade para entrar em contato.
+Este dashboard foi desenvolvido para transformar dados em informações estratégicas, facilitando a análise de desempenho comercial e apoiando decisões com base em indicadores objetivos e inteligência artificial.
